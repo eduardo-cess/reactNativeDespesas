@@ -7,7 +7,7 @@ export default class MainView extends Component {
     static navigationOptions = {
         title: 'Bem Vindo',
         headerTintColor: 'white',
-        headerStyle: { backgroundColor: 'blue' },
+        headerStyle: { backgroundColor: '#700769' },
         headerLeft: (
             <Button transparent>
                 <Icon style={{color:'white'}} name='menu' />
@@ -18,18 +18,7 @@ export default class MainView extends Component {
         const { navigate } = this.props.navigation;
         return (
             <Container>
-                {/*<Header>
-                    <Left>
-                        <Button transparent>
-                            <Icon name='menu' />
-                        </Button>
-                    </Left>
-                    <Body>
-                        <Title>Despesas</Title>
-                    </Body>
-                    <Right />
-                </Header>*/}
-                <Content>
+                <Content padder>
                     <Button full onPress={() => navigate('Cadastro')}>
                         <Text>Nova Despesa</Text>
                     </Button>
@@ -37,7 +26,7 @@ export default class MainView extends Component {
                 </Content>
                 <Footer>
                     <FooterTab>
-                        <Button full>
+                        <Button onPress={() => console.log('teste 123')}>
                             <Text>Footer</Text>
                         </Button>
                     </FooterTab>
