@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { AppRegistry } from 'react-native';
+import { AppRegistry, Navigator, AsyncStorage} from 'react-native';
 import { Text, Container, Button, Form, Content, Item, Label, Input, Toast } from 'native-base';
 
 export default class PageCadastroDespesa extends Component {
@@ -62,7 +62,7 @@ export default class PageCadastroDespesa extends Component {
             }
         });
         // AsyncStorage.setItem('despesa', JSON.stringify(despesa));
-        // PageCadastroDespesa.props.navigation.goBack();
+        this.props.navigation.goBack();
     }
 
     render() {
